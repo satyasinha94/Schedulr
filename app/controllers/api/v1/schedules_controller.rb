@@ -26,7 +26,6 @@ class Api::V1::SchedulesController < ApplicationController
   def remove_appointment
      @schedule = find_schedule
      #grabs last number in url and saves it as the id of the appointment to remove
-     #currently not working because grabbing id of schedule not appointment
      nums = request.url.to_s.scan(/\d+/)
      appointment_id = nums[nums.length - 1]
      puts appointment_id
